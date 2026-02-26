@@ -29,18 +29,16 @@ const jsonLd = {
   },
   "author": {
     "@type": "Organization",
-    "name": "UINUX",
-    "url": "https://uinux.co",
+    "name": "Mitochondros",
   },
   "publisher": {
     "@type": "Organization",
-    "name": "UINUX",
-    "url": "https://uinux.co",
+    "name": "Mitochondros",
   },
 };
 ---
 
-<Layout title={`${post.data.title} — UINUX Blog`} description={post.data.description} ogType="article">
+<Layout title={`${post.data.title} — Mitochondros`} description={post.data.description} ogType="article">
   <script slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <Article title={post.data.title} date={post.data.date} description={post.data.description}>
     <Content />

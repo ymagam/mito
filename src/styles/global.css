@@ -1,5 +1,5 @@
 /* ============================================
-   UINUX Blog — Global Styles
+   Mitochondros — Global Styles
    A calm, typography-first design system.
    ============================================ */
 
@@ -8,15 +8,19 @@
   --font-heading: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", Consolas, monospace;
 
-  --color-text: #1a1a1a;
-  --color-text-secondary: #555;
-  --color-text-tertiary: #888;
-  --color-bg: #fafaf9;
-  --color-surface: #fff;
-  --color-border: #e5e5e3;
-  --color-link: #1a1a1a;
-  --color-link-hover: #555;
-  --color-code-bg: #f4f4f2;
+  --color-accent: #7eb3d4;
+  --color-accent-hover: #5a9bc4;
+  --color-accent-light: #d4e8f3;
+
+  --color-text: #2c3e50;
+  --color-text-secondary: #5a6c7d;
+  --color-text-tertiary: #8896a4;
+  --color-bg: #fdfefe;
+  --color-surface: #ffffff;
+  --color-border: #e8eef3;
+  --color-link: #7eb3d4;
+  --color-link-hover: #5a9bc4;
+  --color-code-bg: #f5f8fa;
 
   --width-content: 640px;
   --width-page: 720px;
@@ -69,5 +73,5 @@ img {
 }
 
 ::selection {
-  background-color: #d4d4d0;
+  background-color: var(--color-accent-light);
 }

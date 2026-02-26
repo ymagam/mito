@@ -1,9 +1,14 @@
 ---
+import Logo from "./Logo.astro";
+
 const currentPath = Astro.url.pathname;
 ---
 
 <nav class="nav">
-  <a href="/" class="nav-brand">UINUX Blog</a>
+  <a href="/" class="nav-brand">
+    <Logo size="small" />
+    <span>Mitochondros</span>
+  </a>
   <div class="nav-links">
     <a href="/search" class:list={[{ active: currentPath === "/search" || currentPath === "/search/" }]}>Search</a>
     <a href="/about" class:list={[{ active: currentPath === "/about" || currentPath === "/about/" }]}>About</a>
@@ -22,6 +27,9 @@ const currentPath = Astro.url.pathname;
   }
 
   .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
     font-family: var(--font-heading);
     font-size: 0.875rem;
     font-weight: 600;
@@ -31,7 +39,11 @@ const currentPath = Astro.url.pathname;
   }
 
   .nav-brand:hover {
-    color: var(--color-text-secondary);
+    color: var(--color-accent);
+  }
+
+  .nav-brand:hover :global(.logo) {
+    color: var(--color-accent-hover);
   }
 
   .nav-links {
@@ -46,8 +58,12 @@ const currentPath = Astro.url.pathname;
     text-decoration: none;
   }
 
-  .nav-links a:hover,
+  .nav-links a:hover {
+    color: var(--color-accent);
+  }
+
   .nav-links a.active {
-    color: var(--color-text);
+    color: var(--color-accent);
+    font-weight: 500;
   }
 </style>

@@ -1,0 +1,70 @@
+---
+interface Props {
+  size?: "small" | "medium" | "large";
+}
+
+const { size = "medium" } = Astro.props;
+
+const sizeMap = {
+  small: 24,
+  medium: 32,
+  large: 48,
+};
+
+const logoSize = sizeMap[size];
+---
+
+<svg
+  class:list={["logo", `logo-${size}`]}
+  width={logoSize}
+  height={logoSize}
+  viewBox="0 0 32 32"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-label="Mitochondros"
+>
+  <path
+    d="M16 4C16 4 8 8 8 16C8 24 16 28 16 28C16 28 24 24 24 16C24 8 16 4 16 4Z"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <ellipse
+    cx="16"
+    cy="16"
+    rx="5"
+    ry="8"
+    stroke="currentColor"
+    stroke-width="1.5"
+    fill="none"
+  />
+  <circle
+    cx="16"
+    cy="16"
+    r="2"
+    fill="currentColor"
+  />
+</svg>
+
+<style>
+  .logo {
+    color: var(--color-accent);
+    transition: color 0.15s ease;
+  }
+
+  .logo-small {
+    width: 24px;
+    height: 24px;
+  }
+
+  .logo-medium {
+    width: 32px;
+    height: 32px;
+  }
+
+  .logo-large {
+    width: 48px;
+    height: 48px;
+  }
+</style>
